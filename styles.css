@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--pink: hsl(340, 85%, 50%);
+	--pink-darker: hsl(340, 85%, 45%);
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#content {
+	width: 100vw;
+	height: 100vh;
+	background: url('https://cdn.hipwallpaper.com/i/92/18/b42iYx.png') no-repeat center center fixed;
+	background-size: cover;
+}
+
+/* HEADER */
+.header {
+	width: 100vw;
+	height: 10vh;
+	background: rgba(0, 0, 0, 0.24);
+	color: #fff;
+
+	padding: 0 10rem;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header .logo {
+	font-size: 3rem;
+	font-weight: bold;
+	font-family: 'Redressed', cursive;
+	color: var(--pink);
+}
+
+.header .navbar-ul {
+	display: flex;
+	align-items: center;
+}
+
+.header .navbar-ul .navbar-ul-li {
+	font-size: 1.5rem;
+	list-style-type: none;
+	margin: 0 3.5rem;
+	cursor: pointer;
+}
+
+.header .navbar-ul .navbar-ul-li:hover,
+.selected {
+	color: var(--pink);
+}
+
+/* HOME SECTION */
+.home-section {
+	text-align: center;
+	margin: 15rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.home-section .main-message {
+	font-size: 7.5rem;
+	font-family: 'Redressed', cursive;
+	background: linear-gradient(to right, hsl(340, 85%, 60%), hsl(340, 85%, 70%), hsl(340, 85%, 80%));
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.home-section .second-message {
+	font-size: 2.5rem;
+	font-family: 'Redressed', cursive;
+	color: #fff;
+}
+
+.home-section .order-button {
+	margin-top: 2rem;
+	border: none;
+	border-radius: 10px;
+	outline: none;
+	padding: 1rem 3rem;
+	color: #fff;
+	font-size: 1.15rem;
+	background: var(--pink);
+	cursor: pointer;
+}
+
+.home-section .order-button:hover {
+	background: var(--pink-darker);
+}
