@@ -1,5 +1,6 @@
 import { mainSection } from './index.js';
 import { createMenuSection } from './menu.js'; // for order button
+import { removeTabsClasses, updateSelectedTab } from './index.js'; // for order button
 
 const content = document.querySelector('#content');
 
@@ -19,11 +20,18 @@ function createHomeSection() {
     const orderButton = document.createElement('button');
     orderButton.classList = 'order-button';
     orderButton.appendChild(document.createTextNode('Order now'));
-    orderButton.addEventListener('click', () => {
+    orderButton.addEventListener('click', (e) => {
+        // create menu section
         mainSection.innerHTML = '';
         createMenuSection();
+
+        // make background scrollable
         content.style.height = 'auto';
-        content.style.minHeight = '100vh'; 
+        content.style.minHeight = '100vh';
+
+        // update the tab selected class
+        removeTabsClasses();
+        updateSelectedTab(e);
     })
     mainSection.appendChild(orderButton);
 }
