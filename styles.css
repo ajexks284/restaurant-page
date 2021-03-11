@@ -146,7 +146,6 @@ body {
 	font-size: 1.5rem;
 	font-family: 'Redressed', cursive;
 	font-weight: bold;
-	/* margin-bottom: 2rem; */
 }
 
 .product-name {
@@ -160,4 +159,96 @@ body {
 .product-recipe {
 	font-size: 1.2rem;
 	margin-top: 1.5rem;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+	width: 60vw;
+	margin: 100px auto 0 auto;
+	padding: 8rem 6rem;
+
+	position: relative;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	color: #fff;
+}
+
+.contact-title {
+	position: absolute;
+	top: 2%;
+	left: 50%;
+	transform: translateX(-50%);
+
+	font-size: 3.5rem;
+
+	background: linear-gradient(to right, hsl(340, 85%, 60%), hsl(340, 85%, 70%), hsl(340, 85%, 80%));
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: min-content;
+	flex: 1;
+}
+
+.contact-form > * {
+	width: 500px;
+	margin: .75rem 0;
+	font-size: 1.25rem;
+}
+
+.contact-form > input,
+.contact-form > textarea {
+	padding: .5rem;
+}
+
+.contact-form > .contact-submit-button {
+	width: 250px;
+	display: block;
+	margin: 0 auto;
+	border: 2px solid #fff;
+	outline: none;
+	background: none;
+	color: #fff;
+	cursor: pointer;
+}
+
+.contact-submit-button:active {
+	transform: translateY(2px);
+}
+
+.message-area {
+	resize: none;
+	height: 250px;
+}
+
+.contact-info {
+	margin-left: 3rem;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.contact-info > * {
+	margin: .5rem 0;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 1.5rem;
+}
+
+.contact-info > * > * {
+	margin: 0 .5rem;
+}
+
+.im {
+	color: var(--pink);
 }
