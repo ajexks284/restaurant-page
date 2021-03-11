@@ -43,18 +43,29 @@ tabs.forEach(tab => {
         }
 
         // Update selected tab
+        removeTabsClasses();
         updateSelectedTab(e);
     });
 })
 
-function updateSelectedTab(e) {
+function removeTabsClasses() {
     tabs.forEach(tab => {
         tab.classList.remove('selected');
     })
-    e.target.classList.add('selected');
+}
+
+function updateSelectedTab(e) {
+    if (e.target.classList.contains('order-button')) {
+        // if click on order button update menu 'selected' tab
+        document.querySelector('.menu').classList.add('selected');
+    } else {
+        // else update the 'selected' tab you clicked on
+        e.target.classList.add('selected');
+    }
 }
 
 // By default we load the home section
 createHomeSection();
 
-export { mainSection }
+export { mainSection };
+export { removeTabsClasses, updateSelectedTab }; // for order button
