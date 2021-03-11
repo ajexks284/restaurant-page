@@ -252,3 +252,49 @@ body {
 .im {
 	color: var(--pink);
 }
+
+/* Media Queries */
+@media (max-width: 1400px) {
+	.menu-section {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 1200px) {
+	.header .logo {
+		font-size: 2rem;
+	}
+
+	.header .navbar-ul .navbar-ul-li {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 800px) {
+	.product-image {
+		display: none;
+	}
+}
+
+@media (max-width: 600px) {
+	.menu-section {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	.product-title,
+	.product-price {
+		font-size: 1rem;
+	}
+
+	.product-recipe {
+		font-size: .75rem;
+	}
+}
+
+@media (max-width: 400px) {
+	.menu-section {
+		padding-left: .5rem;
+		padding-right: .5rem;
+	}
+}
