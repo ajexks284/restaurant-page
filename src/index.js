@@ -37,9 +37,9 @@ tabs.forEach(tab => {
         // Add scroll on menu page
         if (mainSection.classList.contains('menu-section')) {
             content.style.height = 'auto';
-            content.style.minHeight = '100vh'; 
+            content.style.minHeight = '100%'; 
         } else {
-            content.style.height = '100vh';
+            content.style.height = '100%';
         }
 
         // Update selected tab
