@@ -10,6 +10,17 @@ function createHeader() {
     logo.appendChild(document.createTextNode('My Restaurant'));
     header.appendChild(logo);
 
+    // Hamburger
+    const burger = document.createElement('button');
+    burger.classList = 'hamburger';
+    burger.addEventListener('click', () => {
+        navbar.classList.toggle('show');
+    });
+    header.appendChild(burger);
+    const burgerIcon = document.createElement('i');
+    burgerIcon.classList = 'im im-menu';
+    burger.appendChild(burgerIcon);
+
     const navbar = document.createElement('nav');
     navbar.classList = 'navbar';
     header.appendChild(navbar);
